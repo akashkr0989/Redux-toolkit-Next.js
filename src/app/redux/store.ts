@@ -1,6 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducer from "./slice";
+import usersReducer from "./slice";
+import toDosReducer from "./toDoSlice";
 
 export const store = configureStore({
-  reducer
+  reducer: {
+    toDosData: toDosReducer,
+    usersData: usersReducer,
+  }
 });
+
+// export type RootState = ReturnType<typeof store.getState>;
+// export type AppDispatch = typeof store.dispatch;
