@@ -2,6 +2,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToDos } from "../redux/toDoSlice";
+import Link from "next/link";
 
 function ToDoList() {
   const [toDo, setToDo] = React.useState("");
@@ -26,12 +27,17 @@ function ToDoList() {
         >
           Add To Do
         </button>
+        <div className="link-container">
+          <Link href="/" className="link">
+            Go to Home
+          </Link>
+        </div>
       </div>
       <div className="display-user">
         <h2>To DO List</h2>
         {toDoData.length &&
           toDoData.map((item: any) => {
-            return <h3 key={item.id}>{item.name}</h3>
+            return <h3 key={item.id}>{item.name}</h3>;
           })}
       </div>
     </>

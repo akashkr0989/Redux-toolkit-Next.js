@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -8,6 +9,9 @@ function ViewPage() {
   return (
     <div className="display-user">
       <h1>This is View Page</h1>
+      <div className="link-container">
+        <Link href="/" className="link">Go to Home</Link>
+      </div>
     {
         userData.map((data: any) => {
           return (

@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchApiUsers, removeUser } from "../redux/slice";
 import type { RootState, AppDispatch } from "../redux/store";
+import Link from "next/link";
 
 function ApiUsers() {
   const dispatch = useDispatch<AppDispatch>();
@@ -10,14 +11,17 @@ function ApiUsers() {
   console.log(apiUserData);
 
   // useEffect  is used to call api on rendering of this component
-  useEffect(() => {
-    dispatch(fetchApiUsers());
-  });
+  // useEffect(() => {
+  //   dispatch(fetchApiUsers());
+  // });
 
   return (
     <div className="display-user">
       <h2>This is User list Page API Calls</h2>
-      <button onClick={() => dispatch(fetchApiUsers())}>Load Users</button>
+      <div className="link-container">
+        <Link href="/" className="link">Go to Home</Link>
+      </div>
+      <button className="add-user-btn" onClick={() => dispatch(fetchApiUsers())}>Load Users</button>
 
       {apiUserData.userAPIData.map((data: any) => {
         return (
