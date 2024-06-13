@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <h1 className="app-header">Welcome to Redux Toolkit</h1>
         <Provider store={store}>{children}</Provider>
       </body>
     </html>

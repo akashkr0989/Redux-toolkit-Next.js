@@ -13,7 +13,7 @@ function ToDoList() {
   return (
     <>
       <div className="add-user">
-        <h1>Add To Do Tasks</h1>
+        <h2>Add To Do Tasks</h2>
         <input
           className="add-user-input"
           onChange={(e) => setToDo(e.target.value)}

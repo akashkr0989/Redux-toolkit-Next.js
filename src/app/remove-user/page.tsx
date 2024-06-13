@@ -11,7 +11,7 @@ function RemoveUser() {
 
   return (
     <div className="display-user">
-      <h1>This is Remove User Page</h1>
+      <h2>This is Remove User Page</h2>
       <div className="link-container">
         <Link href="/" className="link">Go to Home</Link>
       </div>

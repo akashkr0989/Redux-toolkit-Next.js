@@ -8,7 +8,7 @@ function ViewPage() {
   console.log(userData);
   return (
     <div className="display-user">
-      <h1>This is View Page</h1>
+      <h2>This is View Page</h2>
       <div className="link-container">
         <Link href="/" className="link">Go to Home</Link>
       </div>

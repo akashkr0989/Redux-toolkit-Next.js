@@ -5,6 +5,13 @@
   border: 1px solid orange;
 }
 
+.app-header {
+  height: auto;
+  padding: 10px;
+  padding-left: 50px;
+  color: blue;
+}
+
 .display-user {
   height: 400px;
   padding: 10px;

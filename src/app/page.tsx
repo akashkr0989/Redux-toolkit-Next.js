@@ -5,7 +5,6 @@ import AddUsers from "./components/AddUsers";
 import DisplayUsers from "./components/DisplayUsers";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { PageProps } from '../../.next/types/app/remove-user/page';
 import React from 'react';
 import RemoveUser from "./remove-user/page";
 
