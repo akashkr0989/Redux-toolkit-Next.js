@@ -1,18 +1,20 @@
 "use client";
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../redux/slice";
+import Link from "next/link";
 
-function DisplayUsers() {
+function RemoveUser() {
   const userData = useSelector((data: any) => data.usersData.users);
+  console.log(userData);
 
   const dispatch = useDispatch();
-  console.log(userData);
 
   return (
     <div className="display-user">
-      <h3>User List</h3>
-
+      <h2>This is Remove User Page</h2>
+      <div className="link-container">
+        <Link href="/" className="link">Go to Home</Link>
+      </div>
       {userData.map((data: any) => {
         return (
           <div className="user-list" key={data.id}>
@@ -26,4 +28,4 @@ function DisplayUsers() {
   );
 }
 
-export default DisplayUsers;
+export default RemoveUser;

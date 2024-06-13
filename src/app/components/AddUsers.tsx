@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { addUser } from "../redux/slice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 
 function AddUsers() {
   const [name, setName] = useState("");
@@ -24,6 +25,12 @@ function AddUsers() {
       <button onClick={userDispatch} className="add-user-btn">
         Add User
       </button>
+      <div className="link-container">
+        <Link href="/remove-user" className="link">Remove User</Link>
+        <Link href="/view" className="link">View User</Link>
+        <Link href="/to-do-list" className="link">To Do Page</Link>
+        <Link href="/api-users" className="link">USER API PAGE</Link>
+      </div>
     </div>
   );
 }
