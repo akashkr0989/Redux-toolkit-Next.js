@@ -1,5 +1,5 @@
 .add-user {
-  height: 200px;
+  height: auto;
   padding: 10px;
   padding-left: 50px;
   border: 1px solid orange;
@@ -37,5 +37,48 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
-  /* overflow: scroll; */
+}
+
+.display-user {
+  height: 400px;
+  padding: 10px;
+  padding-left: 50px;
+  margin-top: 10px;
+  border: 1px solid skyblue;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.add-user-input {
+  width: 250px;
+  padding-left: 10px; /* Adjusted to avoid too much padding */
+  height: 35px;
+  display: block;
+  margin-bottom: 10px; /* Added for better spacing */
+}
+
+.add-user-btn {
+  width: 250px;
+  height: 35px;
+  display: block;
+  /* margin-top: 20px; */
+  margin-bottom: 20px; /* Added for better spacing */
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adds space between the links */
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #0070f3; /* Change link color on hover */
 }
