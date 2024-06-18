@@ -30,6 +30,7 @@ function AddUsers() {
         <Link href="/view" className="link">View User</Link>
         <Link href="/to-do-list" className="link">To Do Page</Link>
         <Link href="/api-users" className="link">USER API PAGE</Link>
+        <Link href="/next-auth-login-page" className="link">NEXT AUTH LOGIN</Link>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
+import SessionWrapper from "../../components/SessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <h1 className="app-header">Welcome to Redux Toolkit</h1>
-        <Provider store={store}>{children}</Provider>
-      </body>
-    </html>
+    <SessionWrapper>
+      <html lang="en">
+        <body className={inter.className}>
+          <h1 className="app-header">Welcome to Redux Toolkit</h1>
+          <Provider store={store}>{children}</Provider>
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }
